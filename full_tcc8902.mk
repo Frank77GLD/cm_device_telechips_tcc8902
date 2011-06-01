@@ -18,10 +18,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
 PRODUCT_COPY_FILES += \
-    device/telechips/tcc8902/init.rc:root/init.rc \
-    device/telechips/tcc8902/write-calc_table.sh:system/bin/write-calc_table.sh
+    device/telechips/tcc8902/init.rc:root/init.rc
 
 PRODUCT_COPY_FILES += \
+    device/telechips/tcc8902/init.d/10softmac:system/etc/init.d/10softmac \
+    device/telechips/tcc8902/init.d/11calc_table:system/etc/init.d/11calc_table \
     device/telechips/tcc8902/etc/custom_backup_list.txt:system/etc/custom_backup_list.txt \
     device/telechips/tcc8902/etc/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
     device/telechips/tcc8902/etc/vold.fstab:system/etc/vold.fstab \
@@ -44,7 +45,6 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/fonts/MTLmr3m.ttf:system/fonts/MTLmr3m.ttf
 
 PRODUCT_PACKAGES += \
-    makesoftmac.sh \
     tccgetserial
 
 $(call inherit-product, build/target/product/full.mk)
