@@ -17,7 +17,9 @@ if [ -f /data/misc/pointercal ]; then
 		echo touch.pointercal.scale=$7 >> "/data/misc/idc/$name.idc"
 	done
 
-	mount -o remount,rw /system
-	ln -fs /data/misc/idc /system/usr/idc
-	mount -o remount,ro /system
+	if [ ! -h /system/usr/idc ]; then
+		mount -o remount,rw /system
+		ln -fs /data/misc/idc /system/usr/idc
+		mount -o remount,ro /system
+	fi
 fi
