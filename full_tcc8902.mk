@@ -40,9 +40,6 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
-PRODUCT_COPY_FILES += \
-    frameworks/base/data/fonts/MTLmr3m.ttf:system/fonts/MTLmr3m.ttf
-
 PRODUCT_PACKAGES += \
     tccgetserial \
     TSCalibration
