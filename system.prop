@@ -4,6 +4,7 @@
 dalvik.vm.dexopt-flags=m=y
 ro.additionalmounts=/mnt/flash;/mnt/usb
 ro.opengles.version=131072
+ro.sf.lcd_density=161
 sensor.accelerometer.flip_xy=1
 #sensor.accelerometer.invert_x=1
 sensor.accelerometer.invert_y=1
