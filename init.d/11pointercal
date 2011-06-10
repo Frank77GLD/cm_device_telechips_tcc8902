@@ -3,6 +3,11 @@
 if [ -f /data/misc/pointercal ]; then
 	set -- `cat /data/misc/pointercal`
 
+	if [ -e /sys/devices/platform/tcc-ts/input/input1/calc_table ]; then
+		echo $1 $2 $3 $4 $5 $6: enabled > /sys/devices/platform/tcc-ts/input/input1/calc_table
+		exit 0
+	fi
+
 	for i in /sys/class/input/input*/capabilities/abs; do
 		if [ "`cat $i`" = "0" ]; then
 			continue
