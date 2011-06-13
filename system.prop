@@ -2,7 +2,7 @@
 # system.prop for tcc8902
 #
 dalvik.vm.dexopt-flags=m=y
-ro.additionalmounts=/mnt/flash;/mnt/usb
+ro.additionalmounts=/mnt/nand;/mnt/usb
 ro.opengles.version=131072
 ro.sf.lcd_density=161
 sensor.accelerometer.flip_xy=1
