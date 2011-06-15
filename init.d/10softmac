@@ -4,5 +4,7 @@ if [ ! -f /system/wifi/softmac ]; then
 	mount -o remount,rw /system
 	tccgetserial -w > /system/wifi/softmac
 	mount -o remount,ro /system
+fi
+if [ ! -h /data/softmac ]; then
 	ln -fs /system/wifi/softmac /data/softmac
 fi
