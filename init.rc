@@ -46,7 +46,7 @@ loglevel 3
 
     mkdir /system
     mkdir /data 0771 system system
-    #mkdir /cache 0771 system cache
+    mkdir /cache 0771 system cache
     mkdir /config 0500 root root
 
     # Directory for putting things only root should see.
@@ -102,11 +102,7 @@ on fs
     mount yaffs2 mtd@system /system
     mount yaffs2 mtd@system /system ro remount
     mount yaffs2 mtd@userdata /data nosuid nodev
-    #mount yaffs2 mtd@cache /cache nosuid nodev
-    mkdir /data/cache 0771 system cache
-    chown system cache /data/cache
-    chmod 0771 /data/cache
-    symlink /data/cache /cache
+    mount yaffs2 mtd@cache /cache nosuid nodev
 
 on post-fs
     # once everything is setup, no need to modify /
@@ -140,8 +136,8 @@ on post-fs
     write /proc/apanic_console 1
 
     # Same reason as /data above
-    #chown system cache /cache
-    #chmod 0771 /cache
+    chown system cache /cache
+    chmod 0771 /cache
 
     # This may have been created by the recovery system with odd permissions
     chown system cache /cache/recovery

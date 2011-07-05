@@ -1,6 +1,7 @@
 #
 # system.prop for tcc8902
 #
+dalvik.vm.dexopt-data-only=1
 dalvik.vm.dexopt-flags=m=y
 ro.additionalmounts=/mnt/nand;/mnt/usb
 ro.opengles.version=131072
