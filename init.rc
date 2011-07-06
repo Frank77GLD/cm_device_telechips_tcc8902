@@ -355,7 +355,7 @@ on boot
     chmod 0666 /dev/jpegdec
     chown root video /dev/jpegenc
     chmod 0666 /dev/jpegenc
-    chown system graphics /dev/mali
+    chown system system /dev/mali
     chmod 0666 /dev/mali
     chown system system /dev/msensor
     chmod 0666 /dev/msensor
