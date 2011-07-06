@@ -1,2 +1,15 @@
-add_lunch_combo full_tcc8902-eng
-add_lunch_combo cyanogen_tcc8902-eng
+add_lunch_combo cyanogen_cherry-eng
+add_lunch_combo cyanogen_d10_8k-eng
+add_lunch_combo cyanogen_em51-eng
+add_lunch_combo cyanogen_em71-eng
+add_lunch_combo cyanogen_gpad701-eng
+add_lunch_combo cyanogen_m1001-eng
+add_lunch_combo cyanogen_m1001_8k-eng
+add_lunch_combo cyanogen_p7-eng
+add_lunch_combo cyanogen_p7_8k-eng
+add_lunch_combo cyanogen_scroll7-eng
+add_lunch_combo cyanogen_scroll7_8k-eng
+add_lunch_combo cyanogen_scroll8_16k-eng
+add_lunch_combo cyanogen_x5a-eng
+add_lunch_combo cyanogen_x5a_g-eng
+add_lunch_combo cyanogen_x6d-eng

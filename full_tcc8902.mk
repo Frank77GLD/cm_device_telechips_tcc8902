@@ -1,3 +1,4 @@
+$(call inherit-product, $(SRC_TARGET_DIR)/product/small_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # The gps config appropriate for this device
@@ -43,8 +44,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     tccgetserial \
     TSCalibration
-
-$(call inherit-product, build/target/product/full.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := full_tcc8902
