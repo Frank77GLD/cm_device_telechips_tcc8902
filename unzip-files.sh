@@ -28,7 +28,11 @@ gunzip -c boot.img-ramdisk.gz | cpio -idmuv lib/modules/ufsd.ko
 gunzip -c boot.img-ramdisk.gz | cpio -idmuv lib/modules/viqe.ko
 mv boot.img-zImage kernel
 mv lib/modules/* ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-echo BOARD_KERNEL_PAGESIZE := $((0x`cat boot.img-pagesize`)) > BoardConfig.pagesize.mk
+PAGESIZE=$((0x`cat boot.img-pagesize`))
+cat <<EOF > BoardConfig.pagesize.mk
+BOARD_KERNEL_PAGESIZE := ${PAGESIZE}
+BOARD_NAND_PAGE_SIZE := ${PAGESIZE} -s $((PAGESIZE/32))
+EOF
 rm -f -r boot.img* lib
 
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/asound.conf -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
