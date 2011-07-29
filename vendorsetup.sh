@@ -1,3 +1,5 @@
+add_lunch_combo cyanogen_arival80-eng
+add_lunch_combo cyanogen_arival81-eng
 add_lunch_combo cyanogen_cherry-eng
 add_lunch_combo cyanogen_d10_8k-eng
 add_lunch_combo cyanogen_em51-eng

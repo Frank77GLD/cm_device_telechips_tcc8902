@@ -1,4 +1,6 @@
 PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/cyanogen_arival80.mk \
+    $(LOCAL_DIR)/cyanogen_arival81.mk \
     $(LOCAL_DIR)/cyanogen_cherry.mk \
     $(LOCAL_DIR)/cyanogen_d10_8k.mk \
     $(LOCAL_DIR)/cyanogen_em51.mk \
