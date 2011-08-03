@@ -37,11 +37,11 @@ PRODUCT_PACKAGES += \
     CMParts \
     CMStats \
     CMUpdateNotify \
+    Pacman \
     screenshot \
     CMScreenshot
 #    DSPManager \
 #    libcyanogen-dsp \
-#    Pacman \
 
 # Extra tools in CyanogenMod
 PRODUCT_PACKAGES += \

@@ -1,5 +1,6 @@
 # Inherit AOSP device configuration for TCC8902.
-$(call inherit-product, device/telechips/tcc8902/full_tcc8902.mk)
+#$(call inherit-product, device/telechips/tcc8902/full_tcc8902.mk)
+$(call inherit-product, device/telechips/tcc8902/small_tcc8902.mk)
 
 # Inherit some common cyanogenmod stuff.
 #$(call inherit-product, vendor/cyanogen/products/common.mk)
