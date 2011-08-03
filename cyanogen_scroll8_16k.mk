@@ -2,13 +2,14 @@
 $(call inherit-product, device/telechips/tcc8902/full_tcc8902.mk)
 
 # Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common.mk)
+#$(call inherit-product, vendor/cyanogen/products/common.mk)
+$(call inherit-product, device/telechips/tcc8902/cyanogen_common_small.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+#$(call inherit-product, vendor/cyanogen/products/gsm.mk)
 
 # Include extra dictionaries for LatinIME
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/dictionaries
+#PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/dictionaries
 
 #
 # Setup device specific product configuration.
@@ -47,5 +48,5 @@ endif
 #
 # Copy TCC8902 specific prebuilt files
 #
-PRODUCT_COPY_FILES +=  \
-    vendor/cyanogen/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip
+#PRODUCT_COPY_FILES +=  \
+#    vendor/cyanogen/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip
