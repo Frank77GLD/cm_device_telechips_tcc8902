@@ -25,9 +25,7 @@ unzip -j -o ../../../${DEVICE}_update.zip boot.img
 unpackbootimg -i boot.img
 mv boot.img-zImage kernel
 gunzip -c boot.img-ramdisk.gz | cpio -idmuv \
-    lib/modules/tcc92x_nand.ko \
-    lib/modules/ufsd.ko \
-    lib/modules/viqe.ko
+    lib/modules/tcc92x_nand.ko
 mv lib/modules/* ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 PAGESIZE=$((0x`cat boot.img-pagesize`))
 cat <<EOF > BoardConfig.pagesize.mk
@@ -50,6 +48,8 @@ unzip -j -o ../../../${DEVICE}_update.zip system/lib/libMali.so -d ../../../vend
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libasound.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libaudio.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libaudiopolicy.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/modules/ufsd.ko -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/modules/viqe.ko -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/usr/keylayout/telechips_keypad.kl -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/usr/keylayout/telechips_remote_controller.kl -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/wifi/ar6000.ko -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -99,8 +99,6 @@ PRODUCT_COPY_FILES += \\
 # All the blobs necessary for tcc8902
 PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/tcc92x_nand.ko:root/lib/modules/tcc92x_nand.ko \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/ufsd.ko:root/lib/modules/ufsd.ko \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/viqe.ko:root/lib/modules/viqe.ko \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/asound.conf:system/etc/asound.conf \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libEGL_mali.so:system/lib/egl/libEGL_mali.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libGLESv1_CM_mali.so:system/lib/egl/libGLESv1_CM_mali.so \\
@@ -115,6 +113,8 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libasound.so:system/lib/libasound.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libaudio.so:system/lib/libaudio.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libaudiopolicy.so:system/lib/libaudiopolicy.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/ufsd.ko:system/lib/modules/ufsd.ko \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/viqe.ko:system/lib/modules/viqe.ko \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/telechips_keypad.kl:system/usr/keylayout/telechips_keypad.kl \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/telechips_remote_controller.kl:system/usr/keylayout/telechips_remote_controller.kl \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/ar6000.ko:system/wifi/ar6000.ko \\
