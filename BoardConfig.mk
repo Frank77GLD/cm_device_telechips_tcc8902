@@ -14,6 +14,7 @@ TARGET_ARCH_VARIANT_FPU := vfp
 TARGET_BOOTLOADER_BOARD_NAME := tcc8902
 
 TARGET_PROVIDES_INIT_RC := true
+TARGET_RECOVERY_INITRC := device/telechips/tcc8902/recovery_init.rc
 
 TARGET_PREBUILT_KERNEL := device/telechips/tcc8902/kernel
 BOARD_KERNEL_CMDLINE := console=ttySAC0 androidboot.hardware=tcc92xx
