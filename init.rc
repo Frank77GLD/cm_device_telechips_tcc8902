@@ -313,10 +313,9 @@ on boot
     setprop net.tcp.buffersize.edge    4093,26280,35040,4096,16384,35040
     setprop net.tcp.buffersize.gprs    4092,8760,11680,4096,8760,11680
 
-    insmod /lib/modules/tcc92x_nand.ko
+    insmod /system/lib/modules/tcc92x_nand.ko
     insmod /system/lib/modules/mali.ko
     #insmod /system/lib/modules/ufsd.ko
-    #insmod /system/lib/modules/viqe.ko
 
     chmod 0666 /dev/block/ndda
     chmod 0666 /dev/graphics/fb0
