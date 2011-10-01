@@ -18,7 +18,7 @@ PRODUCT_BRAND := telechips
 PRODUCT_DEVICE := tcc8902
 PRODUCT_MODEL := EM71
 PRODUCT_MANUFACTURER := Emdoor
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=em71 BUILD_ID=GRJ22 BUILD_DISPLAY_ID=GRJ90 BUILD_FINGERPRINT=google/soju/crespo:2.3.4/GRJ22/121341:user/release-keys PRIVATE_BUILD_DESC="soju-user 2.3.4 GRJ22 121341 release-keys" BUILD_NUMBER=121341
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=em71 BUILD_ID=GRJ22 BUILD_DISPLAY_ID=GWK74 BUILD_FINGERPRINT=google/soju/crespo:2.3.4/GRJ22/121341:user/release-keys PRIVATE_BUILD_DESC="soju-user 2.3.4 GRJ22 121341 release-keys" BUILD_NUMBER=121341
 
 # Extra TCC8902 overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/telechips/tcc8902/overlay
@@ -37,10 +37,10 @@ ifdef CYANOGEN_NIGHTLY
 else
     ifdef CYANOGEN_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-RC1-TCC8902
+            ro.modversion=CyanogenMod-7.1.0-TCC8902
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-RC1-TCC8902-KANG
+            ro.modversion=CyanogenMod-7.1.0-TCC8902-KANG
     endif
 endif
 
