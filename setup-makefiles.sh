@@ -104,6 +104,7 @@ PRODUCT_COPY_FILES := \\
 DEVICE_PACKAGE_OVERLAYS := vendor/__MANUFACTURER__/__DEVICE__/overlay
 
 \$(call inherit-product, vendor/__MANUFACTURER__/__DEVICE__/device-vendor-blobs.mk)
+\$(call inherit-product, vendor/__MANUFACTURER__/__DEVICE__/device-vendor-blobs-sensors.mk)
 EOF
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g | sed s/__MANUFACTURER__/$MANUFACTURER/g > ../../../vendor/$MANUFACTURER/$DEVICE/BoardConfigVendor.mk
