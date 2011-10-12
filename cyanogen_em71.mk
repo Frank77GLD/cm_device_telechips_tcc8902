@@ -25,8 +25,8 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/telechips/tcc8902/overlay
 
 # Accelerometer hacks
 PRODUCT_PROPERTY_OVERRIDES += \
-    sensor.accelerometer.flip_xy=1 \
-    sensor.accelerometer.invert_y=1
+    accelerometer.flip_xy=1 \
+    accelerometer.invert_y=1
 
 #
 # Set ro.modversion
