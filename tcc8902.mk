@@ -19,3 +19,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.touchscreen.multitouch.distinct.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.use_dithering=0 \
+    persist.sys.use_16bpp_alpha=1
