@@ -4,6 +4,7 @@ add_lunch_combo cyanogen_cherry-eng
 add_lunch_combo cyanogen_d10_8k-eng
 add_lunch_combo cyanogen_em51-eng
 add_lunch_combo cyanogen_em71-eng
+add_lunch_combo cyanogen_inets1008_8k-eng
 add_lunch_combo cyanogen_p7-eng
 add_lunch_combo cyanogen_p7_8k-eng
 add_lunch_combo cyanogen_scroll7-eng
