@@ -24,7 +24,7 @@ mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip boot.img
 unpackbootimg -i boot.img
 mv boot.img-zImage kernel
-PAGESIZE=$((0x`cat boot.img-pagesize`))
+PAGESIZE=`cat boot.img-pagesize`
 cat <<EOF > BoardConfig.pagesize.mk
 BOARD_KERNEL_PAGESIZE := ${PAGESIZE}
 BOARD_NAND_PAGE_SIZE := ${PAGESIZE} -s $((PAGESIZE/32))
