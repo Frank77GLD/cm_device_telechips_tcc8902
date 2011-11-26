@@ -315,7 +315,7 @@ on boot
 
     insmod /system/lib/modules/tcc92x_nand.ko
     insmod /system/lib/modules/mali.ko
-    #insmod /system/lib/modules/ufsd.ko
+    insmod /system/lib/modules/ufsd.ko
 
     chmod 0666 /dev/block/ndda
     chmod 0666 /dev/graphics/fb0
